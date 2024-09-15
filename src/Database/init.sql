@@ -1,0 +1,2 @@
+CREATE DATABASE StockIt;
+USE StockIt;
