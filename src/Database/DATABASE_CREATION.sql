@@ -1,4 +1,4 @@
 #Création de la base
 
-CREATE DATABASE StockIt;
-USE StockIt;
+CREATE DATABASE STOCKIT;
+USE STOCKIT;
