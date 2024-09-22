@@ -8,8 +8,11 @@
 <h1>Stock it !</h1>
 
     <ul th:each="objet : ${Objets}">
-        <li>ID: <span th:text="${objet.id}"></span></li>
-        <li>Nom: <span th:text="${objet.nom}"></span></li>
+        <li>ID: <span th:text="${objet.OBJET_ID}"></span></li>
+        <li>Nom: <span th:text="${objet.OBJET_NOM}"></span></li>
+        <li>Hauteur: <span th:text="${objet.OBJET_HAUTEUR}"></span></li>
+        <li>Nombre: <span th:text="${objet.OBJET_NOMBRE}"></span></li>
+        <li>Prix: <span th:text="${objet.OBJET_PRIX}"></span></li>
     </ul>
 
 </body>
