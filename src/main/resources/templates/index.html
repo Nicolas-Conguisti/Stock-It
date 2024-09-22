@@ -7,7 +7,10 @@
 <body>
 <h1>Stock it !</h1>
 
-    <p th:text="${idCarton}"></p>
-    <p th:text="${nomCarton}"></p>
+    <ul th:each="objet : ${Objets}">
+        <li>ID: <span th:text="${objet.id}"></span></li>
+        <li>Nom: <span th:text="${objet.nom}"></span></li>
+    </ul>
+
 </body>
 </html>
