@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 @Entity
 @Table(name = "OBJET")
-public class Objet {
+public class ObjetVO {
 
     @Id
     @Column(name = "ID")
@@ -14,7 +14,7 @@ public class Objet {
     @Column(name = "Nom")
     private String nom;
 
-    public Objet(String nom) {
+    public ObjetVO(String nom) {
         this.nom = nom;
     }
 
