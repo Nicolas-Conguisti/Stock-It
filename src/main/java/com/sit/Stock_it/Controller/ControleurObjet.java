@@ -25,8 +25,6 @@ public class ControleurObjet {
 
         model.addAttribute("Objets", ListeObjets);
 
-        System.out.println("APPEL CONTROLLER PRINCIPAL");
-
         return PAGE_INDEX;
     }
 

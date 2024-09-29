@@ -9,49 +9,49 @@ public class ObjetVO {
     //ATTRIBUTS
 
     @Id
-    @Column(name = "OBJET_ID")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "OBJET_ID", nullable = false)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long OBJET_ID;
 
-    @Column(name = "OBJET_NOM", nullable = false)
+    @Column(name = "OBJET_NOM", length = 100, nullable = false)
     private String OBJET_NOM;
 
-    @Column(name = "OBJET_MARQUE")
+    @Column(name = "OBJET_MARQUE", length = 100, nullable = true)
     private String OBJET_MARQUE;
 
-    @Column(name = "OBJET_REFERENCE")
+    @Column(name = "OBJET_REFERENCE", length = 200, nullable = true)
     private String OBJET_REFERENCE;
 
-    @Column(name = "OBJET_PRIX")
+    @Column(name = "OBJET_PRIX", nullable = true)
     private Long OBJET_PRIX;
 
-    @Column(name = "OBJET_NOMBRE")
+    @Column(name = "OBJET_NOMBRE", nullable = true)
     private Integer OBJET_NOMBRE;
 
-    @Column(name = "OBJET_QUANTITE")
+    @Column(name = "OBJET_QUANTITE", length = 30, nullable = true)
     private String OBJET_QUANTITE;
 
-    @Column(name = "OBJET_UTILISATION")
+    @Column(name = "OBJET_UTILISATION", length = 200, nullable = true)
     private String OBJET_UTILISATION;
 
-    @Column(name = "OBJET_LONGUEUR")
+    @Column(name = "OBJET_LONGUEUR", nullable = true)
     private Integer OBJET_LONGUEUR;
 
-    @Column(name = "OBJET_LARGEUR")
+    @Column(name = "OBJET_LARGEUR", nullable = true)
     private Integer OBJET_LARGEUR;
 
-    @Column(name = "OBJET_HAUTEUR")
+    @Column(name = "OBJET_HAUTEUR", nullable = true)
     private Integer OBJET_HAUTEUR;
 
-    @Column(name = "OBJET_ID_CONTENANT")
+    @Column(name = "OBJET_ID_CONTENANT", nullable = true)
     private Long OBJET_ID_CONTENANT;
 
-    @Column(name = "LIEUSTOCK_ID", nullable = false)
-    //METTRE JOIN
-    private Integer LIEUSTOCK_ID;
+    @ManyToOne
+    @JoinColumn(name = "LIEUSTOCK_ID", nullable = false)
+    private LieuStockVO LIEUSTOCK;
 
 
-//CONSTRUCTEURS
+    //CONSTRUCTEURS
 
     public ObjetVO(String nom) {
         this.OBJET_NOM = nom;
@@ -158,12 +158,12 @@ public class ObjetVO {
         this.OBJET_ID = OBJET_ID;
     }
 
-    public Integer getLIEUSTOCK_ID() {
-        return LIEUSTOCK_ID;
+    public LieuStockVO getLIEUSTOCK_ID() {
+        return LIEUSTOCK;
     }
 
-    public void setLIEUSTOCK_ID(Integer LIEUSTOCK_ID) {
-        this.LIEUSTOCK_ID = LIEUSTOCK_ID;
+    public void setLIEUSTOCK_ID(LieuStockVO LIEUSTOCK) {
+        this.LIEUSTOCK = LIEUSTOCK;
     }
 
 }

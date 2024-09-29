@@ -8,7 +8,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class StockItApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(StockItApplication.class, args);
+		System.out.println(" \n -----------------LANCEMENT DE L'APPLICATION---------------------- \n ");
 	}
 
 }
