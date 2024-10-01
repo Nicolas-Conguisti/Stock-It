@@ -1,0 +1,30 @@
+#header{
+    background-color : #f8f6f6;
+    display : flex;
+    justify-content: space-between;
+}
+
+#logo{
+    height: 100px;
+    width: 100px;
+}
+
+#connexion{
+    padding : 5px;
+    padding-bottom : 0px;
+}
+
+#iconeConnexion{
+    height: 70px;
+    width: 70px;
+}
+
+body{
+    background-color : #e0c19e;
+    margin : auto;
+    padding : 20px;
+}
+
+#titre{
+    color : red;
+}

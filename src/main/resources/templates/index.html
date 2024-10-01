@@ -3,19 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>STOCK-IT !</title>
-    <link rel="stylesheet" href="../static/Styles/style.css" th:href="@{/Styles/style.css}">
+    <link rel="stylesheet" href="../../static/Styles/headerStyle.css" th:href="@{/Styles/headerStyle.css}">
 </head>
 <body>
+
+<header th:replace="/Composants/header :: header">
+</header>
+
+
 <h1 id="titre"> Stock it !</h1>
-
-    <ul th:each="objet : ${Objets}">
-        <li>ID: <span th:text="${objet.OBJET_ID}"></span></li>
-        <li>Nom: <span th:text="${objet.OBJET_NOM}"></span></li>
-        <li>Hauteur: <span th:text="${objet.OBJET_HAUTEUR}"></span></li>
-        <li>Nombre: <span th:text="${objet.OBJET_NOMBRE}"></span></li>
-        <li>Prix: <span th:text="${objet.OBJET_PRIX}"></span></li>
-    </ul>
-
     <script src="../static/Dynamic/main.js" th:src="@{/Dynamic/main.js}"></script>
 
 </body>
