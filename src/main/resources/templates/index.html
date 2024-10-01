@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <title>STOCK-IT !</title>
+    <link rel="stylesheet" href="../static/Styles/style.css" th:href="@{/Styles/style.css}">
 </head>
 <body>
-<h1>Stock it !</h1>
+<h1 id="titre"> Stock it !</h1>
 
     <ul th:each="objet : ${Objets}">
         <li>ID: <span th:text="${objet.OBJET_ID}"></span></li>
@@ -14,6 +15,8 @@
         <li>Nombre: <span th:text="${objet.OBJET_NOMBRE}"></span></li>
         <li>Prix: <span th:text="${objet.OBJET_PRIX}"></span></li>
     </ul>
+
+    <script src="../static/Dynamic/main.js" th:src="@{/Dynamic/main.js}"></script>
 
 </body>
 </html>
