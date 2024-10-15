@@ -7,12 +7,12 @@
 </head>
 <body>
 
-<header th:replace="/Composants/header :: header">
-</header>
+<header th:replace="~{/Composants/header :: header}"></header>
+
+<!-- <h1> Essayez Stock it ! une application qui permet de ranger des trucs dans des boîtes</h1>-->
 
 
-<h1 id="titre"> Stock it !</h1>
-    <script src="../static/Dynamic/main.js" th:src="@{/Dynamic/main.js}"></script>
+<script src="../static/Dynamic/main.js" th:src="@{/Dynamic/main.js}"></script>
 
 </body>
 </html>
