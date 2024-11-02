@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>STOCK-IT !</title>
+  <link rel="stylesheet" href="../static/Styles/headerStyle.css" th:href="@{/Styles/headerStyle.css}">
+</head>
+<body>
+<h1 id="titre"> Les lieux de stock</h1>
+
+<ul th:each="lieuStock : ${LieuxStock}">
+  <li>ID: <span th:text="${lieuStock.LIEUSTOCK_ID}"></span></li>
+  <li>Nom: <span th:text="${lieuStock.LIEUSTOCK_NOM}"></span></li>
+  <li>Hauteur: <span th:text="${lieuStock.LIEUSTOCK_ADRESSE}"></span></li>
+</ul>
+
+<script src="../static/Dynamic/main.js" th:src="@{/Dynamic/main.js}"></script>
+
+</body>
+</html>

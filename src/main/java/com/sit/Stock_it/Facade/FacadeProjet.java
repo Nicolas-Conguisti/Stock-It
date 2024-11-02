@@ -14,14 +14,6 @@ public class FacadeProjet {
     @Autowired
     private DAOProjet DAOProjet;
 
-    public List<ProjetVO> RecupererListeProjets() {
-
-        List<ProjetVO> ListeProjets;
-        ListeProjets = DAOProjet.GetListeProjets();
-
-        return ListeProjets;
-    }
-
     public ProjetVO RecupererProjet(Integer idProjet) {
 
         ProjetVO projet = DAOProjet.GetProjet(idProjet);
@@ -29,4 +21,11 @@ public class FacadeProjet {
         return projet;
     }
 
+    public List<ProjetVO> RecupererListeProjets() {
+
+        List<ProjetVO> ListeProjets;
+        ListeProjets = DAOProjet.GetListeProjets();
+
+        return ListeProjets;
+    }
 }

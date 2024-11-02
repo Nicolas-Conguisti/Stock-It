@@ -18,16 +18,6 @@ public class ControleurProjet {
     @Autowired
     private FacadeProjet FacadeProjet;
 
-    @GetMapping("/ListeProjets")
-    public String afficherListeProjets(Model model){
-
-        List<ProjetVO> ListeProjets = FacadeProjet.RecupererListeProjets();
-
-        model.addAttribute("Projets", ListeProjets);
-
-        return PAGE_LISTE_PROJETS;
-    }
-
     @GetMapping("/Projet")
     public String afficherProjet(Model model){
 
@@ -38,4 +28,13 @@ public class ControleurProjet {
         return PAGE_PROJET;
     }
 
+    @GetMapping("/ListeProjets")
+    public String afficherListeProjets(Model model){
+
+        List<ProjetVO> ListeProjets = FacadeProjet.RecupererListeProjets();
+
+        model.addAttribute("Projets", ListeProjets);
+
+        return PAGE_LISTE_PROJETS;
+    }
 }

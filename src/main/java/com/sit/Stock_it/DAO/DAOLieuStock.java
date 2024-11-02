@@ -7,7 +7,7 @@ import org.springframework.data.repository.query.Param;
 
 import java.util.List;
 
-public interface DAOObjet extends JpaRepository<ObjetVO, Long> {
+public interface DAOLieuStock extends JpaRepository<ObjetVO, Long> {
 
     @Query(value = "SELECT * FROM objet WHERE OBJET_ID= :OBJET_ID", nativeQuery = true)
     ObjetVO GetObjet(@Param("OBJET_ID")Integer OBJET_ID);

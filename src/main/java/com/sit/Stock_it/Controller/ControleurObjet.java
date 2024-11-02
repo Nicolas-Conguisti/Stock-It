@@ -18,16 +18,6 @@ public class ControleurObjet {
     @Autowired
     private FacadeObjet FacadeObjet;
 
-    @GetMapping("/ListeObjets")
-    public String afficherListeObjets(Model model){
-
-        List<ObjetVO> ListeObjets = FacadeObjet.RecupererListeObjets();
-
-        model.addAttribute("Objets", ListeObjets);
-
-        return PAGE_LISTE_OBJET;
-    }
-
     @GetMapping("/Objet")
     public String afficherObjet(Model model){
 
@@ -36,5 +26,15 @@ public class ControleurObjet {
         model.addAttribute("Objet", Objet);
 
         return PAGE_OBJET;
+    }
+
+    @GetMapping("/ListeObjets")
+    public String afficherListeObjets(Model model){
+
+        List<ObjetVO> ListeObjets = FacadeObjet.RecupererListeObjets();
+
+        model.addAttribute("Objets", ListeObjets);
+
+        return PAGE_LISTE_OBJET;
     }
 }

@@ -13,19 +13,19 @@ public class FacadeObjet {
     @Autowired
     private DAOObjet DAOObjet;
 
-    public List<ObjetVO> RecupererListeObjets() {
-
-        List<ObjetVO> ListeObjets;
-        ListeObjets = DAOObjet.GetListeObjets();
-
-        return ListeObjets;
-    }
-
     public ObjetVO RecupererObjet(Integer idObjet) {
 
         ObjetVO Objet;
         Objet = DAOObjet.GetObjet(idObjet);
 
         return Objet;
+    }
+
+    public List<ObjetVO> RecupererListeObjets() {
+
+        List<ObjetVO> ListeObjets;
+        ListeObjets = DAOObjet.GetListeObjets();
+
+        return ListeObjets;
     }
 }

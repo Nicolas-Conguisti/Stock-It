@@ -10,9 +10,9 @@ import java.util.List;
 
 public interface DAOProjet extends JpaRepository<ProjetVO, Long> {
 
-    @Query(value = "SELECT * FROM projet", nativeQuery = true)
-    List<ProjetVO> GetListeProjets();
-
     @Query(value = "SELECT * FROM projet WHERE PROJET_ID= :PROJET_ID", nativeQuery = true)
     ProjetVO GetProjet(@Param("PROJET_ID")Integer PROJET_ID);
+
+    @Query(value = "SELECT * FROM projet", nativeQuery = true)
+    List<ProjetVO> GetListeProjets();
 }
