@@ -1,8 +1,7 @@
 package com.sit.Stock_it.Facade;
 
-import com.sit.Stock_it.DAO.DAOObjet;
 import com.sit.Stock_it.Data.LieuStockVO;
-import com.sit.Stock_it.Data.ObjetVO;
+import com.sit.Stock_it.DAO.DAOLieuStock;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

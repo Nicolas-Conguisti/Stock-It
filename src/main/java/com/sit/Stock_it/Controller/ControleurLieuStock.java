@@ -16,7 +16,7 @@ import static com.sit.Stock_it.Constantes.ConstantesPages.PAGE_LISTE_LIEUXSTOCK;
 public class ControleurLieuStock {
 
     @Autowired
-    private com.sit.Stock_it.Facade.FacadeObjet FacadeObjet;
+    private FacadeLieuStock FacadeLieuStock;
 
     @GetMapping("/LieuStock")
     public String afficherLieuStock(Model model){
