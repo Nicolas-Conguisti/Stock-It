@@ -1,12 +1,11 @@
 package com.sit.Stock_it.Controller;
 
-import com.sit.Stock_it.DAO.ObjetDAO;
 import com.sit.Stock_it.Data.ObjetVO;
 import static com.sit.Stock_it.Constantes.ConstantesPages.PAGE_OBJET;
 
+import com.sit.Stock_it.Facade.FacadeObjet;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
@@ -16,23 +15,15 @@ import java.util.List;
 public class ControleurObjet {
 
     @Autowired
-    private ObjetDAO ObjetDAO;
+    private FacadeObjet FacadeObjet;
 
     @GetMapping("/Objet")
     public String afficherObjet(Model model){
 
-        List<ObjetVO> ListeObjets = RecupererListeObjets();
+        List<ObjetVO> ListeObjets = FacadeObjet.RecupererListeObjets();
 
         model.addAttribute("Objets", ListeObjets);
 
         return PAGE_OBJET;
-    }
-
-    private List<ObjetVO> RecupererListeObjets() {
-
-        List<ObjetVO> ListeObjets;
-        ListeObjets = ObjetDAO.GetListeObjets();
-
-        return ListeObjets;
     }
 }

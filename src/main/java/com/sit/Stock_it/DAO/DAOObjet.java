@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
-public interface ObjetDAO extends JpaRepository<ObjetVO, Long> {
+public interface DAOObjet extends JpaRepository<ObjetVO, Long> {
 
     @Query(value = "SELECT * FROM objet", nativeQuery = true)
     List<ObjetVO> GetListeObjets();
