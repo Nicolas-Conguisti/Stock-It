@@ -6,14 +6,14 @@
     <link rel="stylesheet" href="../static/Styles/headerStyle.css" th:href="@{/Styles/headerStyle.css}">
 </head>
 <body>
-<h1 id="titre"> Les objets</h1>
+<h1 id="titre"> Objet <span th:text="${Objet.OBJET_ID}"></span></h1>
 
-<ul th:each="objet : ${Objets}">
-    <li>ID: <span th:text="${objet.OBJET_ID}"></span></li>
-    <li>Nom: <span th:text="${objet.OBJET_NOM}"></span></li>
-    <li>Hauteur: <span th:text="${objet.OBJET_HAUTEUR}"></span></li>
-    <li>Nombre: <span th:text="${objet.OBJET_NOMBRE}"></span></li>
-    <li>Prix: <span th:text="${objet.OBJET_PRIX}"></span></li>
+<ul>
+    <li>ID: <span th:text="${Objet.OBJET_ID}"></span></li>
+    <li>Nom: <span th:text="${Objet.OBJET_NOM}"></span></li>
+    <li>Hauteur: <span th:text="${Objet.OBJET_HAUTEUR}"></span></li>
+    <li>Nombre: <span th:text="${Objet.OBJET_NOMBRE}"></span></li>
+    <li>Prix: <span th:text="${Objet.OBJET_PRIX}"></span></li>
 </ul>
 
 <script src="../static/Dynamic/main.js" th:src="@{/Dynamic/main.js}"></script>

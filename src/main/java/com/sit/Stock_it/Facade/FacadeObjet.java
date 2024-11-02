@@ -20,4 +20,12 @@ public class FacadeObjet {
 
         return ListeObjets;
     }
+
+    public ObjetVO RecupererObjet(Integer idObjet) {
+
+        ObjetVO Objet;
+        Objet = DAOObjet.GetObjet(idObjet);
+
+        return Objet;
+    }
 }

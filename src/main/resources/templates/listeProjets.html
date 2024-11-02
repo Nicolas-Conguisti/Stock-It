@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>STOCK-IT !</title>
+    <link rel="stylesheet" href="../static/Styles/headerStyle.css" th:href="@{/Styles/headerStyle.css}">
+</head>
+<body>
+<h1 id="titre"> Les Projets</h1>
+
+<ul th:each="projet : ${Projets}">
+    <li>ID: <span th:text="${projet.PROJET_ID}"></span></li>
+    <li>Nom: <span th:text="${projet.PROJET_NOM}"></span></li>
+    <li>Adresse: <span th:text="${projet.PROJET_ADRESSE}"></span></li>
+    <li>Type: <span th:text="${projet.PROJET_TYPE}"></span></li>
+</ul>
+
+<script src="../static/Dynamic/main.js" th:src="@{/Dynamic/main.js}"></script>
+
+</body>
+</html>
