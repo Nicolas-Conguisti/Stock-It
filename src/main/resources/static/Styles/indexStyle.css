@@ -1,0 +1,28 @@
+#static_index{
+    display : grid;
+    grid-template-columns: 50% 50%;
+    justify-items: center; /* Centre horizontalement */
+    align-items: center;   /* Centre verticalement */
+}
+
+#static_index-imagePresentation{
+    max-width : 80%;
+    max-height : 80%;
+}
+
+#static_index-contenu{
+    max-width : 80%;
+    max-height : 80%;
+
+    font-family: "Anton", sans-serif;
+    color: #725142;
+    font-size : 150%
+}
+
+#contenu-titre{
+    text-align : center;
+}
+
+.contenu-commencer{
+    text-align : center;
+}

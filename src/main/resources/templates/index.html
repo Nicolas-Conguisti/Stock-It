@@ -4,14 +4,23 @@
     <meta charset="UTF-8">
     <title>STOCK-IT !</title>
     <link rel="stylesheet" href="../../static/Styles/principalStyle.css" th:href="@{/Styles/principalStyle.css}">
+    <link rel="stylesheet" href="../../static/Styles/headerStyle.css" th:href="@{/Styles/indexStyle.css}">
     <link rel="stylesheet" href="../../static/Styles/headerStyle.css" th:href="@{/Styles/headerStyle.css}">
 </head>
 <body>
 
 <header th:replace="~{/Composants/header :: header}"></header>
 
-<!-- <h1> Essayez Stock it ! une application qui permet de ranger des trucs dans des boîtes</h1>-->
+<main id="static_index">
 
+    <img id="static_index-imagePresentation" src="../Images/image_index.png">
+
+    <section id="static_index-contenu">
+        <h1 id="contenu-titre"> Essayez Stock it ! une application qui permet de ranger des trucs dans des boîtes</h1>
+        <a href="./Objet" class="contenu-commencer"> Commencer ! </a>
+    </section>
+
+</main>
 
 <script src="../static/Dynamic/main.js" th:src="@{/Dynamic/main.js}"></script>
 
