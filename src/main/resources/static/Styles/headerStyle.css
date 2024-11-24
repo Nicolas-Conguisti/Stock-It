@@ -34,3 +34,11 @@
     max-height: 40%;
     max-width: 40%;
 }
+
+#header_container-connexion{
+    color: #725142;
+    text-decoration: none;
+}
+#header_container-connexion:hover{
+    text-decoration: underline;
+}
